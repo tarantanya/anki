@@ -1,0 +1,21 @@
+{
+    "name": "anki",
+    "version": "1.0.0",
+    "description": "",
+    "main": "getDay.js",
+    "type": "module",
+    "scripts": {
+      "start": "node getDay.js",
+      "startSend": "node sendCard.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "moment": "^2.30.1",
+      "mysql2": "^3.14.1",
+      "node-fetch": "^3.3.2",
+      "request-promise": "^4.2.6"
+    }
+  }
+  
