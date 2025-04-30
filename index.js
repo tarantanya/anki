@@ -45,6 +45,5 @@ class Instance {
     }
   }
 }
-console.log("test");
 const instance = new Instance();
 await instance.run();
