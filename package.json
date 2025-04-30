@@ -2,11 +2,10 @@
     "name": "anki",
     "version": "1.0.0",
     "description": "",
-    "main": "getDay.js",
+    "main": "index.js",
     "type": "module",
     "scripts": {
-      "start": "node getDay.js",
-      "startSend": "node sendCard.js"
+      "start": "node index.js"
     },
     "keywords": [],
     "author": "",
