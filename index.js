@@ -34,10 +34,8 @@ class Instance {
         this._count = await this._db.getCountCards();
       }
       const cards = await this._db.getCards(this._count);
-      console.log(cards);
       for (const card of cards) {
         const msg = this._telegram.cardFormatMsg(card);
-        console.log(msg);
         await this._telegram.sendTelegramMessage(msg);
         await this._db.updCards(card);
       }

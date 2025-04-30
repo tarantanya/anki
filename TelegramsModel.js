@@ -48,9 +48,9 @@ _Новые_: *${news}*
   cardFormatMsg(card) {
     const {sentence, translation, prefix, body, suffix, deck} = card;
     return `
-*${this.escapeMarkdownV2(sentence)}*
-${this.escapeMarkdownV2(prefix)} *${this.escapeMarkdownV2(body)}* ${this.escapeMarkdownV2(suffix)}  
-||${this.escapeMarkdownV2(translation)}||
-Колода: ${this.escapeMarkdownV2(deck)}`;
+*${this.escapeMarkdownV2(sentence || "")}*
+${this.escapeMarkdownV2(prefix || "")} *${this.escapeMarkdownV2(body || "")}* ${this.escapeMarkdownV2(suffix || "")}  
+||${this.escapeMarkdownV2(translation || "")}||
+Колода: ${this.escapeMarkdownV2(deck || "")}`;
   }
 }
