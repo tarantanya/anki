@@ -50,6 +50,7 @@ export default class MySQLHelper {
   async getCards(limit) {
     try {
       const [data, inf] = await this._mysqlDb.promise().query(`SELECT * FROM ankiCards WHERE dataAt >= "${moment().utc().format("YYYY-MM-DD")}" AND status=0 ORDER BY id LIMIT ${limit}`);
+      console.log(`SELECT * FROM ankiCards WHERE dataAt >= "${moment().utc().format("YYYY-MM-DD")}" AND status=0 ORDER BY id LIMIT ${limit}`);
       return data;
     }catch (err) {
       console.log(err);
