@@ -9,7 +9,7 @@ class Instance {
   constructor() {
     this._token = '7222342632:AAHn1gKlEN52g4OWTpA98Kj_jbdBFOnEVXA';
     this._chatId = '531229561';
-    this._count = 5;
+    this._count = 3;
 
     this._mysql = mysql.createPool({
       connectionLimit: 5,
@@ -30,6 +30,10 @@ class Instance {
 
   async cardsProcess() {
     try {
+      if (moment().utc().format("HH:MM") < "08:00" || moment().utc().format("HH:MM") > "23:00") {
+        return;
+      }
+
       if (moment().utc().format("HH:MM") === "23:00") {
         this._count = await this._db.getCountCards();
       }
