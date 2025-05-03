@@ -30,11 +30,12 @@ class Instance {
 
   async cardsProcess() {
     try {
-      if (moment().utc().format("HH:MM") < "08:00" || moment().utc().format("HH:MM") > "23:00") {
+      if ( new Date().getHours() < 8 || new Date().getHours() > 23) {
+        console.log("exit time 8-23")
         return;
       }
 
-      if (moment().utc().format("HH:MM") === "23:00") {
+      if (new Date().getHours() === 23) {
         this._count = await this._db.getCountCards();
       }
       const cards = await this._db.getCards(this._count);
