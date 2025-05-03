@@ -31,7 +31,7 @@ class Instance {
   async cardsProcess() {
     try {
       if ( new Date().getHours() < 8 || new Date().getHours() > 23) {
-        console.log("exit time 8-23")
+        console.log(`now: ${new Date().getHours()} - exit time 8-23`);
         return;
       }
 
